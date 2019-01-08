@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#222222">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/person_detail_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:paddingHorizontal="5dp">
+
+        <TextView
+                android:id="@+id/person_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:lines="1"
+                android:padding="2dp"
+                android:textSize="18sp"
+                android:textColor="#9A0001"
+        />
+
+        <TextView
+                android:id="@+id/person_detail_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:lines="1"
+                android:padding="2dp"
+                android:textSize="18sp"
+                android:textColor="#9A0001"
+        />
+
+        <TextView
+                android:id="@+id/person_detail_mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:lines="1"
+                android:padding="2dp"
+                android:textSize="18sp"
+                android:textColor="#9A0001"
+        />
+
+        <TextView
+                android:id="@+id/person_detail_created_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:lines="1"
+                android:padding="2dp"
+                android:textSize="18sp"
+        />
+
+    </LinearLayout>
+
+    <ProgressBar
+            android:id="@+id/persons_detail_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+    />
+
+</FrameLayout>

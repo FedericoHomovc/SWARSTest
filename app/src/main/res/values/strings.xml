@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Arrk Android Exercise</string>
+    <string name="network_error_msg">Error fetching data</string>
+
+    <!--Person detail-->
+    <string name="person_detail_title">Character Detail</string>
+    <string name="person_name">Name: %s</string>
+    <string name="person_height">Height (mts): %s</string>
+    <string name="person_mass">Mass (kg): %s</string>
+    <string name="person_created_at">Created at: %s</string>
+
+    <string name="error_dialog_title">Network error. Please try again</string>
+    <string name="error_dialog_retry">Retry</string>
+
 </resources>
