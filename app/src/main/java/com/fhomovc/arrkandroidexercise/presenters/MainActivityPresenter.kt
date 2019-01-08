@@ -8,11 +8,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class MainActivityPresenter(view: MainView) {
+class MainActivityPresenter(private var mainView: MainView) {
 
-    val mainView: MainView = view
-    var pageNumber: Int = 0
-    var lastPage: Boolean = false
+    private var pageNumber: Int = 0
+    private var lastPage: Boolean = false
 
     fun loadPeople() {
         if (lastPage) return

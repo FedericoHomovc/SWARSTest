@@ -4,6 +4,7 @@ import com.fhomovc.arrkandroidexercise.data.APIManager
 import com.fhomovc.arrkandroidexercise.models.Person
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
 
 class PersonDetailPresenter(private var detailView: PersonDetailView) {
 
@@ -13,21 +14,28 @@ class PersonDetailPresenter(private var detailView: PersonDetailView) {
         call.enqueue(object : Callback<Person> {
             override fun onResponse(
                 call: Call<Person>,
-                response: retrofit2.Response<Person>?
+                response: Response<Person>?
             ) {
-                detailView.hideProgress()
-                if (response != null) {
-                    val person: Person = response.body()!!
-                    detailView.setData(person)
-                }
+                onResponse(response)
             }
 
             override fun onFailure(call: Call<Person>, t: Throwable) {
-                detailView.hideProgress()
-                detailView.showError()
+                onError()
             }
         })
+    }
 
+    fun onResponse(response: Response<Person>?) {
+        detailView.hideProgress()
+        if (response != null) {
+            val person: Person = response.body()!!
+            detailView.setData(person)
+        }
+    }
+
+    fun onError() {
+        detailView.hideProgress()
+        detailView.showError()
     }
 
     interface PersonDetailView {
